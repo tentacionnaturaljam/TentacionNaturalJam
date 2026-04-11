@@ -1,22 +1,27 @@
 import React, { useState } from 'react';
 import {
-  AppBar, Toolbar, Box, Button, IconButton,
+  AppBar, Toolbar, Box, Button, IconButton, Badge,
   Drawer, List, ListItem, ListItemButton, ListItemText,
-  useScrollTrigger, Slide,
+  useScrollTrigger,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Logo from './Logo';
+import { useCart } from '../context/CartContext';
 
 const navLinks = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'Productos', href: '#productos' },
+  { label: 'Nuestros  Ingredientes', href: '#ingredientes' },
   { label: 'Nosotros', href: '#nosotros' },
+  { label: 'Ubicación', href: '#ubicacion' },
   { label: 'Contacto', href: '#contacto' },
 ];
 
-const Navbar = () => {
+const Navbar = ({ onCartOpen }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const { totalItems } = useCart();
 
   const scrolled = useScrollTrigger({ disableHysteresis: true, threshold: 50 });
 
@@ -47,7 +52,7 @@ const Navbar = () => {
           </Box>
 
           {/* Desktop nav */}
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1, alignItems: 'center' }}>
             {navLinks.map((link) => (
               <Button
                 key={link.label}
@@ -65,23 +70,26 @@ const Navbar = () => {
             <Button
               variant="contained"
               onClick={() => handleNav('#productos')}
-              sx={{
-                bgcolor: '#FF751F',
-                ml: 1,
-                '&:hover': { bgcolor: '#e06518' },
-              }}
+              sx={{ bgcolor: '#FF751F', ml: 1, '&:hover': { bgcolor: '#e06518' } }}
             >
               Pedir ahora
             </Button>
           </Box>
 
-          {/* Mobile menu button */}
-          <IconButton
-            sx={{ display: { md: 'none' }, color: 'white' }}
-            onClick={() => setDrawerOpen(true)}
-          >
-            <MenuIcon />
-          </IconButton>
+          {/* Mobile: carrito + menu */}
+          <Box sx={{ display: { md: 'none' }, display: 'flex', alignItems: 'center', gap: 0.5 }}>
+            <IconButton onClick={onCartOpen} sx={{ color: 'white' }}>
+              <Badge badgeContent={totalItems} color="warning">
+                <ShoppingCartOutlinedIcon />
+              </Badge>
+            </IconButton>
+            <IconButton
+              sx={{ color: 'white' }}
+              onClick={() => setDrawerOpen(true)}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Box>
         </Toolbar>
       </AppBar>
 

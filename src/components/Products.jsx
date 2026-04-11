@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import borojoAgrazNaranja from '../assets/borojoAgrazNaranja.jpeg';
+import borojoGrabadilla from '../assets/borojoGranadillaJengibre.jpeg';
+import borojoMaracuya from '../assets/borojoMaracuyaArandanos.jpeg';
+import borojoPina from '../assets/borojopina.jpeg';
 import {
-  Box, Container, Typography, Grid, Card, CardContent,
+  Box, Container, Typography, Card, CardContent,
   CardMedia, CardActions, Button, Chip, Stack, Rating, Snackbar, Alert,
 } from '@mui/material';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -8,97 +12,68 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import IconButton from '@mui/material/IconButton';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import { useCart } from '../context/CartContext';
 
 const products = [
   {
     id: 1,
-    name: 'Borojó Puro',
-    subtitle: 'El sabor original del Pacífico',
+    name: 'Borojó, Agraz & Naranja',
+    subtitle: 'Ácido, silvestre, con frescura cítrica al final',
     description:
-      'Nuestra mermelada estrella: borojó 100% puro, sin mezclas. Sabor intenso, terroso y ligeramente ácido que conquista desde el primer bocado.',
+      'Es una combinación exótica y atrevida que funciona por contraste: El borojó pone la base densa y terrosa, el agraz la acidez morada y silvestre, y la naranja aligera todo con frescura cítrica. El resultado es una mermelada oscura, compleja y con capas de sabor nada predecible, muy colombiana.',
     price: '$12.500',
     weight: '250 g',
     rating: 4.9,
     reviews: 128,
     tag: 'Más vendido',
     tagColor: '#A20E0E',
-    img: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=500&q=80',
-    accent: '#8B4513',
+    img: borojoAgrazNaranja,
+    accent: '#FF751F',
   },
   {
     id: 2,
-    name: 'Borojó & Maracuyá',
-    subtitle: 'Exótico y refrescante',
+    name: 'Borojó, Granadilla & Trocitos de Jengibre',
+    subtitle: 'Dulce y floral al inicio, con un remate cálido y picante del jengibre',
     description:
-      'La intensidad del borojó se une al toque tropical del maracuyá para crear una mermelada vibrante, ácida y perfecta para el desayuno.',
+      'Una combinación tropical y vibrante. El borojó da la base densa y profunda, la granadilla aporta dulzura floral y semillas crujientes, y el jengibre irrumpe con un toque picante y cálido que lo cambia todo. Es una mermelada que empieza suave y termina con carácter.',
     price: '$13.500',
     weight: '250 g',
     rating: 4.8,
     reviews: 94,
     tag: 'Nuevo',
     tagColor: '#FF751F',
-    img: 'https://images.unsplash.com/photo-1597562185489-0bb25d5f6de5?w=500&q=80',
+    img: borojoGrabadilla,
     accent: '#FF751F',
   },
   {
     id: 3,
-    name: 'Borojó & Naranja',
-    subtitle: 'Dulce con un toque cítrico',
+    name: 'Borojó, Maracuyá & Arándanos',
+    subtitle: 'Acido, intenso y frutal, con un fondo oscuro y profundo.',
     description:
-      'La dulzura natural del borojó combinada con el frescor de la naranja de Caldas. Una mermelada equilibrada que enamora a toda la familia.',
+      'Una combinación ácida y potente. El maracuyá lidera con su acidez tropical intensa, los arándanos suman profundidad y un tono morado vibrante, y el borojó ancla todo con su cuerpo denso y terroso. Una mermelada atrevida, de sabor vivo y color oscuro impactante.',
     price: '$13.000',
     weight: '250 g',
     rating: 4.7,
     reviews: 87,
     tag: 'Favorita',
     tagColor: '#C93030',
-    img: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=500&q=80',
-    accent: '#E87722',
+    img: borojoMaracuya,
+    accent: '#FF751F',
   },
   {
     id: 4,
-    name: 'Borojó & Agraz',
-    subtitle: 'Antioxidante y deliciosa',
+    name: 'Borojó, Piña & Jengibre',
+    subtitle: 'Dulce y tropical, con acidez fresca de la piña y un toque especiado al final.',
     description:
-      'La fusión del borojó con el agraz silvestre da como resultado una mermelada oscura, rica en antioxidantes, con un sabor profundo y sofisticado.',
+      'Una combinación tropical con punch. La piña aporta dulzura jugosa y acidez fresca, el borojó le da peso y profundidad, y el jengibre remata con un calor especiado que despierta el paladar. Vibrante, refrescante y con carácter.',
     price: '$14.000',
     weight: '250 g',
     rating: 4.8,
     reviews: 62,
     tag: 'Edición especial',
     tagColor: '#6B2D8B',
-    img: 'https://images.unsplash.com/photo-1506617564039-2f3b650b7010?w=500&q=80',
-    accent: '#6B2D8B',
-  },
-  {
-    id: 5,
-    name: 'Borojó & Granadilla',
-    subtitle: 'Dulce y tropical',
-    description:
-      'La suave dulzura de la granadilla balancea el carácter intenso del borojó. Una mermelada elegante y aromática para los paladares más exigentes.',
-    price: '$13.500',
-    weight: '250 g',
-    rating: 4.6,
-    reviews: 55,
-    tag: null,
-    tagColor: null,
-    img: 'https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=500&q=80',
-    accent: '#D4A017',
-  },
-  {
-    id: 6,
-    name: 'Borojó & Jengibre',
-    subtitle: 'Con un toque picante',
-    description:
-      'Para los amantes de los sabores osados: borojó artesanal con un sutil toque de jengibre fresco. Reconfortante, digestiva y adictiva.',
-    price: '$14.500',
-    weight: '250 g',
-    rating: 4.5,
-    reviews: 41,
-    tag: 'Gourmet',
-    tagColor: '#2D7D4E',
-    img: 'https://images.unsplash.com/photo-1571506165871-ee72a35bc9d4?w=500&q=80',
-    accent: '#2D7D4E',
+    img: borojoPina,
+    accent: '#FF751F',
   },
 ];
 
@@ -108,7 +83,8 @@ const ProductCard = ({ product, onAddToCart }) => {
   return (
     <Card
       sx={{
-        height: '100%',
+        flex: 1,
+        minWidth: 0,
         display: 'flex',
         flexDirection: 'column',
         boxShadow: '0 4px 20px rgba(162,14,14,0.08)',
@@ -122,24 +98,7 @@ const ProductCard = ({ product, onAddToCart }) => {
         overflow: 'hidden',
       }}
     >
-      {/* Tag */}
-      {product.tag && (
-        <Chip
-          label={product.tag}
-          size="small"
-          sx={{
-            position: 'absolute',
-            top: 14,
-            left: 14,
-            zIndex: 1,
-            bgcolor: product.tagColor,
-            color: 'white',
-            fontWeight: 700,
-            fontSize: '0.72rem',
-          }}
-        />
-      )}
-
+      
       {/* Favourite button */}
       <IconButton
         onClick={() => setLiked((p) => !p)}
@@ -163,13 +122,13 @@ const ProductCard = ({ product, onAddToCart }) => {
 
       <CardMedia
         component="img"
-        height="200"
         image={product.img}
         alt={product.name}
-        sx={{ objectFit: 'cover' }}
+        sx={{ width: '100%', aspectRatio: '4 / 3', objectFit: 'cover', display: 'block', flexShrink: 0 }}
       />
 
-      <CardContent sx={{ flexGrow: 1, pb: 1 }}>
+      <CardContent sx={{ display: 'flex', flexDirection: 'column', pb: 1, flexGrow: 1 }}>
+        {/* Nombre — fijo a 1 línea */}
         <Typography
           variant="h6"
           sx={{
@@ -177,19 +136,47 @@ const ProductCard = ({ product, onAddToCart }) => {
             fontWeight: 700,
             color: '#A20E0E',
             fontSize: '1.2rem',
+            lineHeight: 1.3,
+            height: '1.56rem',
+            overflow: 'hidden',
+            whiteSpace: 'nowrap',
+            textOverflow: 'ellipsis',
             mb: 0.3,
           }}
         >
           {product.name}
         </Typography>
-        <Typography variant="caption" sx={{ color: product.accent, fontWeight: 600 }}>
+
+        {/* Subtítulo — fijo a 1 línea */}
+        <Typography
+          variant="caption"
+          sx={{
+            color: product.accent,
+            fontWeight: 600,
+            display: 'block',
+            height: '1.2rem',
+            overflow: 'hidden',
+            whiteSpace: 'nowrap',
+            textOverflow: 'ellipsis',
+          }}
+        >
           {product.subtitle}
         </Typography>
-        <Typography variant="body2" sx={{ color: '#6B3A3A', mt: 1, lineHeight: 1.6, fontSize: '0.88rem' }}>
+
+        {/* Descripción — fijo a 4 líneas */}
+        <Typography variant="body2" sx={{
+          color: '#6B3A3A', mt: 1, lineHeight: 1.6, fontSize: '0.88rem',
+          display: '-webkit-box',
+          WebkitLineClamp: 4,
+          WebkitBoxOrient: 'vertical',
+          overflow: 'hidden',
+          height: '5.6rem',
+        }}>
           {product.description}
         </Typography>
 
-        <Stack direction="row" alignItems="center" spacing={1} sx={{ mt: 1.5 }}>
+        {/* Rating */}
+        <Stack direction="row" alignItems="center" spacing={1} sx={{ mt: 1.5, height: '1.5rem' }}>
           <Rating
             value={product.rating}
             precision={0.1}
@@ -202,7 +189,8 @@ const ProductCard = ({ product, onAddToCart }) => {
           </Typography>
         </Stack>
 
-        <Stack direction="row" alignItems="center" spacing={1} sx={{ mt: 1.5 }}>
+        {/* Peso */}
+        <Stack direction="row" alignItems="center" spacing={1} sx={{ mt: 1.5, height: '1.5rem' }}>
           <LocalOfferIcon sx={{ fontSize: '0.9rem', color: '#6B3A3A' }} />
           <Typography variant="caption" sx={{ color: '#6B3A3A' }}>
             {product.weight} · Hecho a mano
@@ -226,7 +214,7 @@ const ProductCard = ({ product, onAddToCart }) => {
           variant="contained"
           size="small"
           startIcon={<ShoppingCartOutlinedIcon />}
-          onClick={() => onAddToCart(product.name)}
+          onClick={() => onAddToCart(product)}
           sx={{
             bgcolor: '#A20E0E',
             fontSize: '0.8rem',
@@ -243,10 +231,12 @@ const ProductCard = ({ product, onAddToCart }) => {
 };
 
 const Products = () => {
+  const { addToCart } = useCart();
   const [snackbar, setSnackbar] = useState({ open: false, product: '' });
 
-  const handleAddToCart = (name) => {
-    setSnackbar({ open: true, product: name });
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    setSnackbar({ open: true, product: product.name });
   };
 
   return (
@@ -308,13 +298,11 @@ const Products = () => {
           </Typography>
         </Box>
 
-        <Grid container spacing={3}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 3 }}>
           {products.map((product) => (
-            <Grid item xs={12} sm={6} md={4} key={product.id}>
-              <ProductCard product={product} onAddToCart={handleAddToCart} />
-            </Grid>
+            <ProductCard key={product.id} product={product} onAddToCart={handleAddToCart} />
           ))}
-        </Grid>
+        </Box>
 
         {/* WhatsApp CTA */}
         <Box

@@ -1,32 +1,32 @@
 import React from 'react';
 import {
-  Box, Container, Typography, Grid, Paper, Chip,
+  Box, Container, Typography, Grid, Card, CardContent, Chip,
 } from '@mui/material';
 import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
-import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import Storefront from '@mui/icons-material/Storefront';
+import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import StarIcon from '@mui/icons-material/Star';
 
 const values = [
   {
     icon: <LocalFloristIcon sx={{ fontSize: '2rem', color: '#A20E0E' }} />,
-    title: 'Natural & Artesanal',
-    desc: 'Elaboramos cada frasco a mano con ingredientes 100% naturales, sin aditivos químicos. Respetamos los procesos tradicionales de conservación.',
+    title: 'Ingredientes naturales',
+    desc: 'Utilizamos borojó fresco y frutas tropicales colombianas seleccionadas, sin conservantes ni aditivos químicos, conservando la esencia natural de cada ingrediente.',
   },
   {
-    icon: <PeopleAltIcon sx={{ fontSize: '2rem', color: '#A20E0E' }} />,
-    title: 'Apoyo local',
-    desc: 'Trabajamos directamente con agricultores del Pacífico colombiano para garantizar borojó fresco y apoyar a las comunidades productoras.',
-  },
-  {
-    icon: <FavoriteIcon sx={{ fontSize: '2rem', color: '#A20E0E' }} />,
-    title: 'Hecho con amor',
-    desc: 'Cada mermelada es una receta familiar perfeccionada durante años. El sabor que ponemos en cada frasco se nota desde la primera cucharada.',
+    icon: <EmojiObjectsIcon sx={{ fontSize: '2rem', color: '#A20E0E' }} />,
+    title: 'Innovación artesanal',
+    desc: 'Fusionamos técnicas tradicionales con combinaciones innovadoras de frutas colombianas, creando propuestas con alto valor sensorial que desafían lo convencional.',
   },
   {
     icon: <StarIcon sx={{ fontSize: '2rem', color: '#A20E0E' }} />,
-    title: 'Calidad premium',
-    desc: 'Seleccionamos solo los mejores frutos en su punto óptimo de madurez. Control de calidad riguroso en cada lote de producción.',
+    title: 'Calidad & sabor',
+    desc: 'Cada frasco pasa por un riguroso control de calidad. Textura suave, aroma envolvente y sabor intenso que resalta la riqueza de los ingredientes colombianos.',
+  },
+  {
+    icon: <Storefront sx={{ fontSize: '2rem', color: '#A20E0E' }} />,
+    title: 'Proveedores',
+    desc: 'Contamos con la ayuda de algunos de los mejores distribuidores de frutas del país especialistas en la calidad del producto necesario para llevarlo a tu mesa y 100% de origen colombiano',
   },
 ];
 
@@ -39,7 +39,7 @@ const About = () => (
     }}
   >
     <Container maxWidth="lg">
-      <Grid container spacing={6} alignItems="center">
+      <Grid container spacing={6} alignItems="flex-start">
         {/* Left: text */}
         <Grid item xs={12} md={6}>
           <Chip
@@ -57,7 +57,7 @@ const About = () => (
               mb: 1,
             }}
           >
-            Del Pacífico a tu mesa
+            Nació de un desafío
           </Typography>
           <Typography
             sx={{
@@ -67,66 +67,133 @@ const About = () => (
               mb: 3,
             }}
           >
-            con sabor colombiano
+            a lo convencional
           </Typography>
 
           <Typography variant="body1" sx={{ color: '#4A2020', lineHeight: 1.9, mb: 2, fontSize: '1rem' }}>
-            <strong>Tentación Natural</strong> nació en 2026 de un sueño sencillo: llevar el sabor
-            auténtico del borojó —esa fruta ancestral del Chocó— a cada hogar colombiano en forma
-            de mermelada artesanal.
+            Comenzó con una frase que lo cambió todo. En una clase de gastronomía, mientras
+            aprendíamos las reglas "correctas", alguien nos dijo que a veces ir contra el mundo
+            y lo convencional es la mejor opción para crear grandes cosas.
           </Typography>
           <Typography variant="body1" sx={{ color: '#4A2020', lineHeight: 1.9, mb: 2, fontSize: '1rem' }}>
-            Empezamos en una cocina familiar con recetas heredadas de abuela, usando frutos
-            cosechados directamente por agricultores locales. Hoy, cada frasco de Tentación Natural
-            es el resultado de una pasión genuina por los sabores del Pacífico colombiano.
+            Ese fue el <em>click</em> que necesitábamos. Una de nosotras se atrevió con una
+            combinación extraña que, al principio, todas dudamos. Pero en el momento en que la
+            probamos, el silencio en la cocina lo dijo todo: era perfecta. Ese experimento nos
+            demostró que las mejores creaciones nacen cuando confías en tu instinto.
           </Typography>
-          <Typography variant="body1" sx={{ color: '#4A2020', lineHeight: 1.9, fontSize: '1rem' }}>
-            Nuestra misión es preservar la riqueza gastronómica del borojó, apoyar a las
-            comunidades campesinas y ofrecerte una experiencia sensorial que te haga volver
-            una y otra vez. <em>Cae en la tentación.</em>
+          <Typography variant="body1" sx={{ color: '#4A2020', lineHeight: 1.9, mb: 3, fontSize: '1rem' }}>
+            Solo somos cuatro niñas que crecieron… y hoy estamos haciendo realidad una marca para
+            la que, sin saberlo, nos estuvimos preparando toda la vida. Entre risas, experimentos
+            y muchas cuentas, descubrimos que nuestro destino era crear esta tentación juntas.
           </Typography>
+
+          {/* Misión */}
+          <Box sx={{ mb: 2.5 }}>
+            <Typography
+              sx={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontWeight: 700,
+                fontSize: '1.15rem',
+                color: '#A20E0E',
+                mb: 0.8,
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+              }}
+            >
+              Misión
+            </Typography>
+            <Typography variant="body1" sx={{ color: '#4A2020', lineHeight: 1.9, fontSize: '0.97rem' }}>
+              Elaborar mermeladas artesanales de alta calidad, fusionando técnicas tradicionales con
+              la riqueza de las frutas tropicales de Colombia. Nos enfocamos en utilizar ingredientes
+              frescos y naturales, apoyando a productores locales y promoviendo el aprovechamiento de
+              la diversidad frutal del país.
+            </Typography>
+          </Box>
+
+          {/* Visión */}
+          <Box>
+            <Typography
+              sx={{
+                fontFamily: "'Cormorant Garamond', serif",
+                fontWeight: 700,
+                fontSize: '1.15rem',
+                color: '#A20E0E',
+                mb: 0.8,
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
+              }}
+            >
+              Visión
+            </Typography>
+            <Typography variant="body1" sx={{ color: '#4A2020', lineHeight: 1.9, fontSize: '0.97rem' }}>
+              Posicionarnos como una marca destacada en la elaboración de mermeladas artesanales de
+              alta calidad, reconocida por la innovación en combinaciones de frutas colombianas y por
+              la valorización de ingredientes autóctonos, ofreciendo una propuesta diferenciada que
+              resalte la riqueza frutal de Colombia.
+            </Typography>
+          </Box>
         </Grid>
 
         {/* Right: values grid */}
         <Grid item xs={12} md={6}>
-          <Grid container spacing={2}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 2 }}>
             {values.map((val) => (
-              <Grid item xs={12} sm={6} key={val.title}>
-                <Paper
-                  elevation={0}
-                  sx={{
-                    p: 3,
-                    borderRadius: 3,
-                    border: '1px solid #f0c8c8',
-                    bgcolor: 'white',
-                    height: '100%',
-                    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                    '&:hover': {
-                      transform: 'translateY(-4px)',
-                      boxShadow: '0 8px 24px rgba(162,14,14,0.1)',
-                    },
-                  }}
-                >
-                  <Box sx={{ mb: 1.5 }}>{val.icon}</Box>
+              <Card
+                key={val.title}
+                sx={{
+                  borderRadius: 4,
+                  boxShadow: '0 4px 20px rgba(162,14,14,0.08)',
+                  border: '1px solid #f5d5d5',
+                  overflow: 'hidden',
+                  transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+                  '&:hover': {
+                    transform: 'translateY(-6px)',
+                    boxShadow: '0 16px 40px rgba(162,14,14,0.14)',
+                  },
+                }}
+              >
+                {/* Top band */}
+                <Box sx={{ height: 8, background: 'linear-gradient(90deg, #A20E0E, #A20E0E99)' }} />
+
+                <CardContent sx={{ textAlign: 'center', pt: 3, pb: 3 }}>
+                  {/* Icon circle */}
+                  <Box
+                    sx={{
+                      width: 64,
+                      height: 64,
+                      borderRadius: '50%',
+                      bgcolor: '#FBEAEA',
+                      border: '3px solid #A20E0E',
+                      boxShadow: '0 0 0 4px #A20E0E20',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      mx: 'auto',
+                      mb: 2,
+                    }}
+                  >
+                    {val.icon}
+                  </Box>
+
                   <Typography
                     variant="h6"
                     sx={{
                       fontFamily: "'Cormorant Garamond', serif",
                       fontWeight: 700,
-                      color: '#A20E0E',
-                      mb: 1,
+                      color: '#2C1A1A',
                       fontSize: '1.1rem',
+                      mb: 1,
                     }}
                   >
                     {val.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: '#6B3A3A', lineHeight: 1.7, fontSize: '0.88rem' }}>
+                  <Typography variant="body2" sx={{ color: '#6B3A3A', lineHeight: 1.7, fontSize: '0.87rem' }}>
                     {val.desc}
                   </Typography>
-                </Paper>
-              </Grid>
+                </CardContent>
+              </Card>
             ))}
-          </Grid>
+          </Box>
         </Grid>
       </Grid>
     </Container>

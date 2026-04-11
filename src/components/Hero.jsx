@@ -219,7 +219,7 @@ const Hero = () => {
                 },
               }}
             >
-              <Mascot size={260} />
+              <Mascot size={650} />
             </Box>
             <Typography
               variant="caption"

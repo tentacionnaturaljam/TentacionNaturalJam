@@ -1,42 +1,46 @@
 import React from 'react';
 import {
-  Box, Container, Typography, Grid, Card, CardContent,
+  Box, Container, Typography, Card, CardContent,
   Avatar, Chip, Stack,
 } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import IconButton from '@mui/material/IconButton';
+import viviana from '../assets/viviana.jpeg';
+import maria from '../assets/maria.jpeg';
+import paula from '../assets/paula.jpeg';
+import fernanda from '../assets/fernanda.jpeg';
 
 const teamMembers = [
   {
-    name: 'Valentina Córdoba',
+    name: 'Nicolle Viviana Pineda Espinosa',
     role: 'Fundadora & Chef Principal',
-    bio: 'Apasionada por la gastronomía colombiana, Valentina lleva más de 8 años estudiando las propiedades del borojó y experimentando en su cocina del Chocó.',
-    img: 'https://i.pravatar.cc/300?img=47',
+    bio: 'Estructura y corazón del proyecto. Da orden a cada sueño con precisión y equilibrio, convirtiendo nuestras ideas en una realidad firme y con propósito.',
+    img: viviana,
     color: '#A20E0E',
     badge: 'Fundadora',
   },
   {
-    name: 'Andrés Mosquera',
+    name: 'María del Mar Guerrero Silva',
     role: 'Director de Operaciones',
-    bio: 'Con su expertise en cadena de suministro agrícola, Andrés garantiza que solo el mejor borojó fresco llegue a nuestra cocina, directamente de los productores.',
-    img: 'https://i.pravatar.cc/300?img=12',
+    bio: 'Guardiana de la cocina. Con amor y precisión, cuida cada proceso para que cada producto conserve su esencia artesanal y sepa a perfección.',
+    img: maria,
     color: '#FF751F',
     badge: 'Operaciones',
   },
   {
-    name: 'Luz Marina Torres',
+    name: 'Paula Andrea Soriano Fernández',
     role: 'Artesana & Control de Calidad',
-    bio: 'Heredera de recetas ancestrales del Pacífico, Luz Marina aporta el alma tradicional a cada frasco. Sus manos son las que dan vida a nuestras mermeladas.',
-    img: 'https://i.pravatar.cc/300?img=45',
+    bio: 'Mentee Creativa y Chief Taster. El alma alegre del equipo, transforma ideas en magia y cuida cada detalle hasta alcanzar la perfección en cada sabor.',
+    img: paula,
     color: '#A20E0E',
     badge: 'Artesana',
   },
   {
-    name: 'Felipe Rentería',
+    name: 'Maria Fernanda Mendoza Guzmán',
     role: 'Diseño & Marketing Digital',
-    bio: 'Felipe es quien lleva la esencia de Tentación Natural al mundo digital, creando contenido que conecta nuestra historia con personas que aman lo auténtico.',
-    img: 'https://i.pravatar.cc/300?img=33',
+    bio: 'Mente creativa de Tentación Natural. Convierte frutas exóticas en experiencias inolvidables y logra que cada sabor cuente una historia que conecta y enamora.',
+    img: fernanda,
     color: '#FF751F',
     badge: 'Marketing',
   },
@@ -79,18 +83,6 @@ const TeamCard = ({ member }) => (
         }}
       />
 
-      <Chip
-        label={member.badge}
-        size="small"
-        sx={{
-          bgcolor: member.color,
-          color: 'white',
-          fontWeight: 700,
-          fontSize: '0.7rem',
-          mb: 1.5,
-        }}
-      />
-
       <Typography
         variant="h6"
         sx={{
@@ -107,18 +99,6 @@ const TeamCard = ({ member }) => (
       <Typography
         variant="body2"
         sx={{
-          color: member.color,
-          fontWeight: 600,
-          fontSize: '0.82rem',
-          mb: 1.5,
-        }}
-      >
-        {member.role}
-      </Typography>
-
-      <Typography
-        variant="body2"
-        sx={{
           color: '#6B3A3A',
           lineHeight: 1.7,
           fontSize: '0.87rem',
@@ -128,26 +108,7 @@ const TeamCard = ({ member }) => (
         {member.bio}
       </Typography>
 
-      <Stack direction="row" justifyContent="center" spacing={0.5}>
-        <IconButton
-          size="small"
-          sx={{
-            color: member.color,
-            '&:hover': { bgcolor: `${member.color}15` },
-          }}
-        >
-          <InstagramIcon fontSize="small" />
-        </IconButton>
-        <IconButton
-          size="small"
-          sx={{
-            color: member.color,
-            '&:hover': { bgcolor: `${member.color}15` },
-          }}
-        >
-          <LinkedInIcon fontSize="small" />
-        </IconButton>
-      </Stack>
+      
     </CardContent>
   </Card>
 );
@@ -204,13 +165,11 @@ const Team = () => (
         </Typography>
       </Box>
 
-      <Grid container spacing={3} justifyContent="center">
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }, gap: 3 }}>
         {teamMembers.map((member) => (
-          <Grid item xs={12} sm={6} md={3} key={member.name}>
-            <TeamCard member={member} />
-          </Grid>
+          <TeamCard key={member.name} member={member} />
         ))}
-      </Grid>
+      </Box>
     </Container>
   </Box>
 );
