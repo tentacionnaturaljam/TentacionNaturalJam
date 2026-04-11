@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import borojoAgrazNaranja from '../assets/borojoAgrazNaranja.jpeg';
 import borojoGrabadilla from '../assets/borojoGranadillaJengibre.jpeg';
 import borojoMaracuya from '../assets/borojoMaracuyaArandanos.jpeg';
-import borojoPina from '../assets/borojopina.jpeg';
+import borojoPina from '../assets/borojoPina.jpeg';
 import {
   Box, Container, Typography, Card, CardContent,
   CardMedia, CardActions, Button, Chip, Stack, Rating, Snackbar, Alert,
