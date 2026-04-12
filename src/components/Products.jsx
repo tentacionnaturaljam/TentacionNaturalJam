@@ -198,7 +198,7 @@ const ProductCard = ({ product, onAddToCart }) => {
         </Stack>
       </CardContent>
 
-      <CardActions sx={{ px: 2, pb: 2, pt: 0, justifyContent: 'space-between', alignItems: 'center' }}>
+      <CardActions sx={{ px: 2, pb: 2, pt: 0, justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 1 }}>
         <Typography
           variant="h6"
           sx={{
@@ -298,7 +298,7 @@ const Products = () => {
           </Typography>
         </Box>
 
-        <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 3 }}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, gap: 3 }}>
           {products.map((product) => (
             <ProductCard key={product.id} product={product} onAddToCart={handleAddToCart} />
           ))}

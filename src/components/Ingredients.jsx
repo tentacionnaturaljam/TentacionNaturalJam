@@ -148,13 +148,12 @@ const Ingredients = () => (
             {/* Top band */}
             <Box sx={{ height: 6, bgcolor: ing.color }} />
 
-            <CardContent sx={{ textAlign: 'center', pt: 3, pb: 3 }}>
+            <CardContent sx={{ textAlign: 'center', pt: 3, pb: 3, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               {/* Image */}
               <Box
                 sx={{
                   width: 140,
                   height: 140,
-                  mx: 'auto',
                   mb: 2,
                   display: 'flex',
                   alignItems: 'center',

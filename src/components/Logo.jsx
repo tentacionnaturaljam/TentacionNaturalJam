@@ -6,7 +6,11 @@ const Logo = ({ size = 'medium', light = false }) => {
   const scales = {
     small: { tentacion: '1.4rem', natural: '1.2rem', year: '0.55rem' },
     medium: { tentacion: '2.2rem', natural: '1.9rem', year: '0.75rem' },
-    large: { tentacion: '3.8rem', natural: '3.2rem', year: '1rem' },
+    large: {
+      tentacion: { xs: '2.6rem', sm: '3.2rem', md: '3.8rem' },
+      natural:   { xs: '2.2rem', sm: '2.7rem', md: '3.2rem' },
+      year:      { xs: '0.75rem', md: '1rem' },
+    },
   };
   const s = scales[size] || scales.medium;
 

@@ -123,6 +123,7 @@ const Hero = () => {
               direction={{ xs: 'column', sm: 'row' }}
               spacing={2}
               justifyContent={{ xs: 'center', md: 'flex-start' }}
+              sx={{ width: '100%' }}
             >
               <Button
                 variant="contained"
@@ -134,6 +135,7 @@ const Hero = () => {
                   fontSize: '1rem',
                   py: 1.5,
                   px: 4,
+                  width: { xs: '100%', sm: 'auto' },
                   '&:hover': { bgcolor: '#7A0A0A' },
                 }}
               >
@@ -149,6 +151,7 @@ const Hero = () => {
                   fontSize: '1rem',
                   py: 1.5,
                   px: 4,
+                  width: { xs: '100%', sm: 'auto' },
                   '&:hover': {
                     bgcolor: '#A20E0E10',
                     borderColor: '#A20E0E',
@@ -219,7 +222,7 @@ const Hero = () => {
                 },
               }}
             >
-              <Mascot size={650} />
+              <Mascot size={300} />
             </Box>
             <Typography
               variant="caption"

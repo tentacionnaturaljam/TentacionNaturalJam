@@ -72,6 +72,14 @@ const theme = createTheme({
         },
       },
     },
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: '#A20E0E',
+          backgroundImage: 'none',
+        },
+      },
+    },
   },
 });
 

@@ -98,7 +98,7 @@ const Navbar = ({ onCartOpen }) => {
         anchor="right"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        PaperProps={{ sx: { width: 260, bgcolor: '#A20E0E' } }}
+        PaperProps={{ sx: { width: 260, backgroundColor: '#A20E0E', backgroundImage: 'none' } }}
       >
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
           <IconButton onClick={() => setDrawerOpen(false)} sx={{ color: 'white' }}>
@@ -111,10 +111,17 @@ const Navbar = ({ onCartOpen }) => {
         <List>
           {navLinks.map((link) => (
             <ListItem key={link.label} disablePadding>
-              <ListItemButton onClick={() => handleNav(link.href)}>
+              <ListItemButton
+                onClick={() => handleNav(link.href)}
+                sx={{
+                  borderRadius: 1,
+                  mx: 1,
+                  '&:hover': { bgcolor: 'rgba(255,255,255,0.15)' },
+                }}
+              >
                 <ListItemText
                   primary={link.label}
-                  primaryTypographyProps={{ color: 'white', fontWeight: 500 }}
+                  slotProps={{ primary: { sx: { color: 'white', fontWeight: 500, fontSize: '0.95rem' } } }}
                 />
               </ListItemButton>
             </ListItem>
