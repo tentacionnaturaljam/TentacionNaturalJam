@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i 's/#FBEAEA/#fdf3e8/g' c:/Users/Johan/Documents/Source/TentacionNaturalJam/src/components/__TRACKED_VAR__.jsx)",
+      "Bash(sed -i 's/#FDF6F6/#faf6ee/g' c:/Users/Johan/Documents/Source/TentacionNaturalJam/src/components/__TRACKED_VAR__.jsx)",
+      "Bash(sed -i 's/#6B3A3A/#4a3018/g' c:/Users/Johan/Documents/Source/TentacionNaturalJam/src/components/__TRACKED_VAR__.jsx)",
+      "Bash(sed -i 's/#2C1A1A/#2a1a0e/g' c:/Users/Johan/Documents/Source/TentacionNaturalJam/src/components/__TRACKED_VAR__.jsx)",
+      "Bash(sed -i 's/rgba\\(162,14,14/rgba\\(193,60,44/g' c:/Users/Johan/Documents/Source/TentacionNaturalJam/src/components/__TRACKED_VAR__.jsx)"
+    ]
+  }
+}

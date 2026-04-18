@@ -29,7 +29,7 @@ const Footer = () => {
     <Box
       id="contacto"
       sx={{
-        bgcolor: '#1A0808',
+        bgcolor: '#0e1c08',
         color: 'white',
         pt: { xs: 6, md: 10 },
         pb: 4,
@@ -64,9 +64,9 @@ const Footer = () => {
                   target={href ? '_blank' : undefined}
                   rel={href ? 'noopener noreferrer' : undefined}
                   sx={{
-                    bgcolor: '#A20E0E',
+                    bgcolor: '#5c7523',
                     color: 'white',
-                    '&:hover': { bgcolor: '#FF751F' },
+                    '&:hover': { bgcolor: '#de6b02' },
                     transition: 'background 0.2s',
                   }}
                 >
@@ -79,7 +79,7 @@ const Footer = () => {
               sx={{
                 fontFamily: "'Great Vibes', cursive",
                 fontSize: '1.4rem',
-                color: '#FF751F',
+                color: '#de6b02',
                 mt: 3,
               }}
             >
@@ -91,7 +91,7 @@ const Footer = () => {
           <Box>
             <Typography
               variant="subtitle1"
-              sx={{ fontWeight: 700, mb: 2.5, color: '#FF751F', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}
+              sx={{ fontWeight: 700, mb: 2.5, color: '#de6b02', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}
             >
               Navegación
             </Typography>
@@ -112,7 +112,7 @@ const Footer = () => {
                     fontSize: '0.9rem',
                     textAlign: 'left',
                     transition: 'color 0.2s',
-                    '&:hover': { color: '#FF751F' },
+                    '&:hover': { color: '#de6b02' },
                   }}
                 >
                   {item.label}
@@ -125,7 +125,7 @@ const Footer = () => {
           <Box>
             <Typography
               variant="subtitle1"
-              sx={{ fontWeight: 700, mb: 2.5, color: '#FF751F', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}
+              sx={{ fontWeight: 700, mb: 2.5, color: '#de6b02', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}
             >
               Productos
             </Typography>
@@ -151,51 +151,51 @@ const Footer = () => {
           <Box>
             <Typography
               variant="subtitle1"
-              sx={{ fontWeight: 700, mb: 2.5, color: '#FF751F', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}
+              sx={{ fontWeight: 700, mb: 2.5, color: '#de6b02', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}
             >
               Contacto
             </Typography>
             <Stack spacing={2}>
               <Stack direction="row" spacing={1.5} alignItems="flex-start">
-                <PlaceIcon sx={{ color: '#FF751F', fontSize: '1.1rem', mt: 0.3, flexShrink: 0 }} />
+                <PlaceIcon sx={{ color: '#de6b02', fontSize: '1.1rem', mt: 0.3, flexShrink: 0 }} />
                 <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.9rem' }}>
                   Politécnico Grancolombiano - Campus Bogotá: Calle 57 #3-00 <br />
                   Envíos a todo el país
                 </Typography>
               </Stack>
               <Stack direction="row" spacing={1.5} alignItems="flex-start">
-                <PlaceIcon sx={{ color: '#FF751F', fontSize: '1.1rem', mt: 0.3, flexShrink: 0 }} />
+                <PlaceIcon sx={{ color: '#de6b02', fontSize: '1.1rem', mt: 0.3, flexShrink: 0 }} />
                 <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.9rem' }}>
                   Politécnico Grancolombiano – City Campus: Calle 61 # 7-69<br />
                   Envíos a todo el país
                 </Typography>
               </Stack>
               <Stack direction="row" spacing={1.5} alignItems="center">
-                <PhoneIcon sx={{ color: '#FF751F', fontSize: '1.1rem', flexShrink: 0 }} />
+                <PhoneIcon sx={{ color: '#de6b02', fontSize: '1.1rem', flexShrink: 0 }} />
                 <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.9rem' }}>
                   +57 305 736 1464
                 </Typography>
               </Stack>
               <Stack direction="row" spacing={1.5} alignItems="center">
-                <EmailIcon sx={{ color: '#FF751F', fontSize: '1.1rem', flexShrink: 0 }} />
+                <EmailIcon sx={{ color: '#de6b02', fontSize: '1.1rem', flexShrink: 0 }} />
                 <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.9rem' }}>
                   tentacionnaturaljam@gmail.com
                 </Typography>
               </Stack>
             </Stack>
 
-            <Box sx={{ mt: 3, p: 2, bgcolor: 'rgba(162,14,14,0.3)', borderRadius: 2, border: '1px solid rgba(162,14,14,0.4)' }}>
+            <Box sx={{ mt: 3, p: 2, bgcolor: 'rgba(92,117,35,0.3)', borderRadius: 2, border: '1px solid rgba(92,117,35,0.4)' }}>
               <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.85rem', mb: 0.5, fontWeight: 600 }}>
                 Redes sociales
               </Typography>
               <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.82rem' }}>
-                TikTok: <strong style={{ color: '#FF751F' }}>@tentacin.natural</strong>
+                TikTok: <strong style={{ color: '#de6b02' }}>@tentacin.natural</strong>
               </Typography>
               <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.82rem' }}>
-                Instagram: <strong style={{ color: '#FF751F' }}>@tentacionnatural.jam</strong>
+                Instagram: <strong style={{ color: '#de6b02' }}>@tentacionnatural.jam</strong>
               </Typography>
               <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.55)', fontSize: '0.82rem' }}>
-                Facebook: <strong style={{ color: '#FF751F' }}>Tentación Natural</strong>
+                Facebook: <strong style={{ color: '#de6b02' }}>Tentación Natural</strong>
               </Typography>
             </Box>
           </Box>

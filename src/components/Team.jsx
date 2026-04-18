@@ -17,32 +17,36 @@ const teamMembers = [
     role: 'Fundadora & Chef Principal',
     bio: 'Estructura y corazón del proyecto. Da orden a cada sueño con precisión y equilibrio, convirtiendo nuestras ideas en una realidad firme y con propósito.',
     img: viviana,
-    color: '#A20E0E',
+    color: '#c13c2c',
     badge: 'Fundadora',
+    imgPosition: 'center 33%',
   },
   {
     name: 'María del Mar Guerrero Silva',
     role: 'Director de Operaciones',
     bio: 'Guardiana de la cocina. Con amor y precisión, cuida cada proceso para que cada producto conserve su esencia artesanal y sepa a perfección.',
     img: maria,
-    color: '#FF751F',
+    color: '#de6b02',
     badge: 'Operaciones',
+    imgPosition: 'center top',
   },
   {
     name: 'Paula Andrea Soriano Fernández',
     role: 'Artesana & Control de Calidad',
     bio: 'Mentee Creativa y Chief Taster. El alma alegre del equipo, transforma ideas en magia y cuida cada detalle hasta alcanzar la perfección en cada sabor.',
     img: paula,
-    color: '#A20E0E',
+    color: '#c13c2c',
     badge: 'Artesana',
+    imgPosition: 'center 30%',
   },
   {
     name: 'Maria Fernanda Mendoza Guzmán',
     role: 'Diseño & Marketing Digital',
     bio: 'Mente creativa de Tentación Natural. Convierte frutas exóticas en experiencias inolvidables y logra que cada sabor cuente una historia que conecta y enamora.',
     img: fernanda,
-    color: '#FF751F',
+    color: '#de6b02',
     badge: 'Marketing',
+    imgPosition: 'center top%',
   },
 ];
 
@@ -51,13 +55,13 @@ const TeamCard = ({ member }) => (
     sx={{
       height: '100%',
       borderRadius: 4,
-      boxShadow: '0 4px 20px rgba(162,14,14,0.08)',
-      border: '1px solid #f5d5d5',
+      boxShadow: '0 4px 20px rgba(92,117,35,0.08)',
+      border: '1px solid #d4e8b4',
       overflow: 'hidden',
       transition: 'transform 0.25s ease, box-shadow 0.25s ease',
       '&:hover': {
         transform: 'translateY(-6px)',
-        boxShadow: '0 16px 40px rgba(162,14,14,0.14)',
+        boxShadow: '0 16px 40px rgba(92,117,35,0.14)',
       },
     }}
   >
@@ -80,6 +84,7 @@ const TeamCard = ({ member }) => (
           mb: 2,
           border: `3px solid ${member.color}`,
           boxShadow: `0 0 0 4px ${member.color}20`,
+          '& img': { objectPosition: member.imgPosition || 'center center' },
         }}
       />
 
@@ -88,7 +93,7 @@ const TeamCard = ({ member }) => (
         sx={{
           fontFamily: "'Cormorant Garamond', serif",
           fontWeight: 700,
-          color: '#2C1A1A',
+          color: '#1a2a0a',
           fontSize: '1.2rem',
           mb: 0.3,
         }}
@@ -99,7 +104,7 @@ const TeamCard = ({ member }) => (
       <Typography
         variant="body2"
         sx={{
-          color: '#6B3A3A',
+          color: '#3a4a1a',
           lineHeight: 1.7,
           fontSize: '0.87rem',
           mb: 2,
@@ -125,14 +130,14 @@ const Team = () => (
       <Box sx={{ textAlign: 'center', mb: 8 }}>
         <Chip
           label="Conoce al equipo"
-          sx={{ bgcolor: '#FBEAEA', color: '#A20E0E', fontWeight: 600, mb: 2, fontSize: '0.82rem' }}
+          sx={{ bgcolor: '#f3f8ed', color: '#c13c2c', fontWeight: 600, mb: 2, fontSize: '0.82rem' }}
         />
         <Typography
           variant="h2"
           sx={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 700,
-            color: '#A20E0E',
+            color: '#c13c2c',
             fontSize: { xs: '2.4rem', md: '3.2rem' },
             lineHeight: 1.1,
           }}
@@ -143,7 +148,7 @@ const Team = () => (
           sx={{
             fontFamily: "'Great Vibes', cursive",
             fontSize: { xs: '2rem', md: '2.8rem' },
-            color: '#FF751F',
+            color: '#de6b02',
             mt: 0.5,
             mb: 2,
           }}
@@ -153,7 +158,7 @@ const Team = () => (
         <Typography
           variant="body1"
           sx={{
-            color: '#6B3A3A',
+            color: '#3a4a1a',
             maxWidth: 520,
             mx: 'auto',
             lineHeight: 1.8,

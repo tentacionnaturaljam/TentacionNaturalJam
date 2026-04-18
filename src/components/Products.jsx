@@ -26,9 +26,9 @@ const products = [
     rating: 4.9,
     reviews: 128,
     tag: 'Más vendido',
-    tagColor: '#A20E0E',
+    tagColor: '#5c7523',
     img: borojoAgrazNaranja,
-    accent: '#FF751F',
+    accent: '#de6b02',
   },
   {
     id: 2,
@@ -41,9 +41,9 @@ const products = [
     rating: 4.8,
     reviews: 94,
     tag: 'Nuevo',
-    tagColor: '#FF751F',
+    tagColor: '#de6b02',
     img: borojoGrabadilla,
-    accent: '#FF751F',
+    accent: '#de6b02',
   },
   {
     id: 3,
@@ -56,9 +56,9 @@ const products = [
     rating: 4.7,
     reviews: 87,
     tag: 'Favorita',
-    tagColor: '#C93030',
+    tagColor: '#5c7523',
     img: borojoMaracuya,
-    accent: '#FF751F',
+    accent: '#de6b02',
   },
   {
     id: 4,
@@ -73,7 +73,7 @@ const products = [
     tag: 'Edición especial',
     tagColor: '#6B2D8B',
     img: borojoPina,
-    accent: '#FF751F',
+    accent: '#de6b02',
   },
 ];
 
@@ -87,18 +87,18 @@ const ProductCard = ({ product, onAddToCart }) => {
         minWidth: 0,
         display: 'flex',
         flexDirection: 'column',
-        boxShadow: '0 4px 20px rgba(162,14,14,0.08)',
-        border: '1px solid #FBEAEA',
+        boxShadow: '0 4px 20px rgba(92,117,35,0.08)',
+        border: '1px solid #d4e8b4',
         transition: 'transform 0.25s ease, box-shadow 0.25s ease',
         '&:hover': {
           transform: 'translateY(-6px)',
-          boxShadow: '0 12px 36px rgba(162,14,14,0.15)',
+          boxShadow: '0 12px 36px rgba(92,117,35,0.15)',
         },
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      
+
       {/* Favourite button */}
       <IconButton
         onClick={() => setLiked((p) => !p)}
@@ -109,14 +109,14 @@ const ProductCard = ({ product, onAddToCart }) => {
           zIndex: 1,
           bgcolor: 'white',
           boxShadow: 1,
-          '&:hover': { bgcolor: '#FBEAEA' },
+          '&:hover': { bgcolor: '#f3f8ed' },
         }}
         size="small"
       >
         {liked ? (
-          <FavoriteIcon sx={{ color: '#A20E0E', fontSize: '1.1rem' }} />
+          <FavoriteIcon sx={{ color: '#c13c2c', fontSize: '1.1rem' }} />
         ) : (
-          <FavoriteBorderIcon sx={{ color: '#A20E0E', fontSize: '1.1rem' }} />
+          <FavoriteBorderIcon sx={{ color: '#c13c2c', fontSize: '1.1rem' }} />
         )}
       </IconButton>
 
@@ -134,7 +134,7 @@ const ProductCard = ({ product, onAddToCart }) => {
           sx={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 700,
-            color: '#A20E0E',
+            color: '#c13c2c',
             fontSize: '1.2rem',
             lineHeight: 1.3,
             height: '1.56rem',
@@ -165,7 +165,7 @@ const ProductCard = ({ product, onAddToCart }) => {
 
         {/* Descripción — fijo a 4 líneas */}
         <Typography variant="body2" sx={{
-          color: '#6B3A3A', mt: 1, lineHeight: 1.6, fontSize: '0.88rem',
+          color: '#3a4a1a', mt: 1, lineHeight: 1.6, fontSize: '0.88rem',
           display: '-webkit-box',
           WebkitLineClamp: 4,
           WebkitBoxOrient: 'vertical',
@@ -182,7 +182,7 @@ const ProductCard = ({ product, onAddToCart }) => {
             precision={0.1}
             readOnly
             size="small"
-            sx={{ '& .MuiRating-iconFilled': { color: '#FF751F' } }}
+            sx={{ '& .MuiRating-iconFilled': { color: '#de6b02' } }}
           />
           <Typography variant="caption" sx={{ color: '#888' }}>
             {product.rating} ({product.reviews})
@@ -191,8 +191,8 @@ const ProductCard = ({ product, onAddToCart }) => {
 
         {/* Peso */}
         <Stack direction="row" alignItems="center" spacing={1} sx={{ mt: 1.5, height: '1.5rem' }}>
-          <LocalOfferIcon sx={{ fontSize: '0.9rem', color: '#6B3A3A' }} />
-          <Typography variant="caption" sx={{ color: '#6B3A3A' }}>
+          <LocalOfferIcon sx={{ fontSize: '0.9rem', color: '#3a4a1a' }} />
+          <Typography variant="caption" sx={{ color: '#3a4a1a' }}>
             {product.weight} · Hecho a mano
           </Typography>
         </Stack>
@@ -204,7 +204,7 @@ const ProductCard = ({ product, onAddToCart }) => {
           sx={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 700,
-            color: '#A20E0E',
+            color: '#c13c2c',
             fontSize: '1.3rem',
           }}
         >
@@ -216,11 +216,11 @@ const ProductCard = ({ product, onAddToCart }) => {
           startIcon={<ShoppingCartOutlinedIcon />}
           onClick={() => onAddToCart(product)}
           sx={{
-            bgcolor: '#A20E0E',
+            bgcolor: '#5c7523',
             fontSize: '0.8rem',
             py: 0.8,
             px: 2,
-            '&:hover': { bgcolor: '#7A0A0A' },
+            '&:hover': { bgcolor: '#3e5018' },
           }}
         >
           Agregar
@@ -253,8 +253,8 @@ const Products = () => {
           <Chip
             label="Nuestros productos"
             sx={{
-              bgcolor: '#FBEAEA',
-              color: '#A20E0E',
+              bgcolor: '#f3f8ed',
+              color: '#c13c2c',
               fontWeight: 600,
               mb: 2,
               fontSize: '0.82rem',
@@ -265,7 +265,7 @@ const Products = () => {
             sx={{
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 700,
-              color: '#A20E0E',
+              color: '#c13c2c',
               fontSize: { xs: '2.4rem', md: '3.2rem' },
               lineHeight: 1.1,
             }}
@@ -276,7 +276,7 @@ const Products = () => {
             sx={{
               fontFamily: "'Great Vibes', cursive",
               fontSize: { xs: '1.8rem', md: '2.4rem' },
-              color: '#FF751F',
+              color: '#de6b02',
               mt: 0.5,
               mb: 2,
             }}
@@ -286,7 +286,7 @@ const Products = () => {
           <Typography
             variant="body1"
             sx={{
-              color: '#6B3A3A',
+              color: '#3a4a1a',
               maxWidth: 540,
               mx: 'auto',
               lineHeight: 1.8,
@@ -310,7 +310,7 @@ const Products = () => {
             mt: 8,
             p: { xs: 3, md: 5 },
             borderRadius: 4,
-            background: 'linear-gradient(135deg, #A20E0E, #C93030)',
+            background: 'linear-gradient(135deg, #5c7523, #7a9a2e)',
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
             alignItems: 'center',
@@ -338,16 +338,16 @@ const Products = () => {
           <Button
             variant="contained"
             size="large"
-            href="https://wa.me/573001234567"
+            href="https://wa.me/573057361464"
             target="_blank"
             sx={{
-              bgcolor: '#FF751F',
+              bgcolor: '#de6b02',
               flexShrink: 0,
               fontSize: '1rem',
               px: 4,
               py: 1.5,
               whiteSpace: 'nowrap',
-              '&:hover': { bgcolor: '#e06518' },
+              '&:hover': { bgcolor: '#b85a02' },
             }}
           >
             Pedir por WhatsApp
@@ -364,7 +364,7 @@ const Products = () => {
         <Alert
           severity="success"
           onClose={() => setSnackbar({ open: false, product: '' })}
-          sx={{ bgcolor: '#A20E0E', color: 'white', '& .MuiAlert-icon': { color: 'white' } }}
+          sx={{ bgcolor: '#5c7523', color: 'white', '& .MuiAlert-icon': { color: 'white' } }}
         >
           ¡<strong>{snackbar.product}</strong> agregado al carrito!
         </Alert>

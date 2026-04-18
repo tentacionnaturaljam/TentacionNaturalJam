@@ -37,9 +37,9 @@ const Navbar = ({ onCartOpen }) => {
         position="fixed"
         elevation={scrolled ? 4 : 0}
         sx={{
-          bgcolor: scrolled ? '#A20E0E' : 'transparent',
+          bgcolor: scrolled ? '#5c7523' : 'transparent',
           backdropFilter: scrolled ? 'none' : 'blur(8px)',
-          backgroundColor: scrolled ? '#A20E0E' : 'rgba(162,14,14,0.92)',
+          backgroundColor: scrolled ? '#5c7523' : 'rgba(92,117,35,0.92)',
           transition: 'all 0.3s ease',
         }}
       >
@@ -70,7 +70,7 @@ const Navbar = ({ onCartOpen }) => {
             <Button
               variant="contained"
               onClick={() => handleNav('#productos')}
-              sx={{ bgcolor: '#FF751F', ml: 1, '&:hover': { bgcolor: '#e06518' } }}
+              sx={{ bgcolor: '#de6b02', ml: 1, '&:hover': { bgcolor: '#b85a02' } }}
             >
               Pedir ahora
             </Button>
@@ -98,7 +98,7 @@ const Navbar = ({ onCartOpen }) => {
         anchor="right"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        PaperProps={{ sx: { width: 260, backgroundColor: '#A20E0E', backgroundImage: 'none' } }}
+        slotProps={{ paper: { sx: { width: 260, backgroundColor: '#5c7523', backgroundImage: 'none' } } }}
       >
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
           <IconButton onClick={() => setDrawerOpen(false)} sx={{ color: 'white' }}>
@@ -131,7 +131,7 @@ const Navbar = ({ onCartOpen }) => {
               fullWidth
               variant="contained"
               onClick={() => handleNav('#productos')}
-              sx={{ bgcolor: '#FF751F', '&:hover': { bgcolor: '#e06518' } }}
+              sx={{ bgcolor: '#de6b02', '&:hover': { bgcolor: '#b85a02' } }}
             >
               Pedir ahora
             </Button>

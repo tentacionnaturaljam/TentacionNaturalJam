@@ -23,7 +23,7 @@ const Location = () => (
     id="ubicacion"
     sx={{
       py: { xs: 8, md: 12 },
-      bgcolor: '#FDF6F6',
+      bgcolor: '#edf6e5',
     }}
   >
     <Container maxWidth="lg">
@@ -31,14 +31,14 @@ const Location = () => (
       <Box sx={{ textAlign: 'center', mb: 8 }}>
         <Chip
           label="Encuéntranos"
-          sx={{ bgcolor: '#FBEAEA', color: '#A20E0E', fontWeight: 600, mb: 2, fontSize: '0.82rem' }}
+          sx={{ bgcolor: '#f3f8ed', color: '#c13c2c', fontWeight: 600, mb: 2, fontSize: '0.82rem' }}
         />
         <Typography
           variant="h2"
           sx={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 700,
-            color: '#A20E0E',
+            color: '#c13c2c',
             fontSize: { xs: '2.4rem', md: '3.2rem' },
             lineHeight: 1.1,
           }}
@@ -49,7 +49,7 @@ const Location = () => (
           sx={{
             fontFamily: "'Great Vibes', cursive",
             fontSize: { xs: '1.8rem', md: '2.4rem' },
-            color: '#FF751F',
+            color: '#de6b02',
             mt: 0.5,
             mb: 2,
           }}
@@ -58,7 +58,7 @@ const Location = () => (
         </Typography>
         <Typography
           variant="body1"
-          sx={{ color: '#6B3A3A', maxWidth: 500, mx: 'auto', lineHeight: 1.8, fontSize: '1rem' }}
+          sx={{ color: '#3a4a1a', maxWidth: 500, mx: 'auto', lineHeight: 1.8, fontSize: '1rem' }}
         >
           Puedes encontrarnos en los dos campus del Politécnico Grancolombiano.
           ¡Ven a probar nuestras mermeladas!
@@ -79,13 +79,13 @@ const Location = () => (
             sx={{
               borderRadius: 4,
               overflow: 'hidden',
-              boxShadow: '0 4px 24px rgba(162,14,14,0.09)',
-              border: '1px solid #FBEAEA',
+              boxShadow: '0 4px 24px rgba(92,117,35,0.09)',
+              border: '1px solid #f3f8ed',
               bgcolor: 'white',
             }}
           >
             {/* Top band */}
-            <Box sx={{ height: 6, bgcolor: '#A20E0E' }} />
+            <Box sx={{ height: 6, bgcolor: '#5c7523' }} />
 
             {/* Map iframe */}
             <Box
@@ -109,20 +109,20 @@ const Location = () => (
               alignItems="flex-start"
               sx={{ px: 3, py: 2.5 }}
             >
-              <PlaceIcon sx={{ color: '#A20E0E', fontSize: '1.2rem', mt: 0.2, flexShrink: 0 }} />
+              <PlaceIcon sx={{ color: '#c13c2c', fontSize: '1.2rem', mt: 0.2, flexShrink: 0 }} />
               <Box>
                 <Typography
                   sx={{
                     fontFamily: "'Cormorant Garamond', serif",
                     fontWeight: 700,
                     fontSize: '1.1rem',
-                    color: '#A20E0E',
+                    color: '#c13c2c',
                     lineHeight: 1.2,
                   }}
                 >
                   {loc.label} — {loc.name}
                 </Typography>
-                <Typography variant="body2" sx={{ color: '#6B3A3A', mt: 0.4, fontSize: '0.9rem' }}>
+                <Typography variant="body2" sx={{ color: '#3a4a1a', mt: 0.4, fontSize: '0.9rem' }}>
                   {loc.address}
                 </Typography>
               </Box>

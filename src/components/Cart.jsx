@@ -46,11 +46,15 @@ const Cart = ({ open, onClose }) => {
         anchor="right"
         open={open}
         onClose={onClose}
-        PaperProps={{
-          sx: {
-            width: { xs: '100vw', sm: 400 },
-            display: 'flex',
-            flexDirection: 'column',
+        slotProps={{
+          paper: {
+            sx: {
+              width: { xs: '100vw', sm: 400 },
+              display: 'flex',
+              flexDirection: 'column',
+              backgroundColor: '#cfe3a2',
+              backgroundImage: 'none',
+            },
           },
         }}
       >
@@ -59,7 +63,7 @@ const Cart = ({ open, onClose }) => {
           sx={{
             px: 3,
             py: 2,
-            bgcolor: '#A20E0E',
+            bgcolor: '#5c7523',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -81,7 +85,7 @@ const Cart = ({ open, onClose }) => {
             {totalItems > 0 && (
               <Box
                 sx={{
-                  bgcolor: '#FF751F',
+                  bgcolor: '#de6b02',
                   color: 'white',
                   borderRadius: '50%',
                   width: 22,
@@ -115,7 +119,7 @@ const Cart = ({ open, onClose }) => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: 2,
-                color: '#B07070',
+                color: '#7a8a50',
               }}
             >
               <ShoppingCartOutlinedIcon sx={{ fontSize: '3.5rem', opacity: 0.4 }} />
@@ -143,7 +147,7 @@ const Cart = ({ open, onClose }) => {
                         sx={{
                           fontWeight: 700,
                           fontSize: '0.9rem',
-                          color: '#A20E0E',
+                          color: '#c13c2c',
                           fontFamily: "'Cormorant Garamond', serif",
                           whiteSpace: 'nowrap',
                           overflow: 'hidden',
@@ -172,9 +176,9 @@ const Cart = ({ open, onClose }) => {
                       <IconButton
                         size="small"
                         onClick={() => updateQty(item.id, -1)}
-                        sx={{ border: '1px solid #FBEAEA', p: 0.3, width: 24, height: 24 }}
+                        sx={{ border: '1px solid #f3f8ed', p: 0.3, width: 24, height: 24 }}
                       >
-                        <RemoveIcon sx={{ fontSize: '0.8rem', color: '#A20E0E' }} />
+                        <RemoveIcon sx={{ fontSize: '0.8rem', color: '#c13c2c' }} />
                       </IconButton>
                       <Typography sx={{ fontWeight: 700, width: 18, textAlign: 'center', fontSize: '0.85rem' }}>
                         {item.qty}
@@ -182,16 +186,16 @@ const Cart = ({ open, onClose }) => {
                       <IconButton
                         size="small"
                         onClick={() => updateQty(item.id, 1)}
-                        sx={{ border: '1px solid #FBEAEA', p: 0.3, width: 24, height: 24 }}
+                        sx={{ border: '1px solid #f3f8ed', p: 0.3, width: 24, height: 24 }}
                       >
-                        <AddIcon sx={{ fontSize: '0.8rem', color: '#A20E0E' }} />
+                        <AddIcon sx={{ fontSize: '0.8rem', color: '#c13c2c' }} />
                       </IconButton>
                       <IconButton
                         size="small"
                         onClick={() => removeFromCart(item.id)}
                         sx={{ p: 0.3, width: 28, height: 28, ml: 0.5 }}
                       >
-                        <DeleteOutlineIcon sx={{ fontSize: '1rem', color: '#B07070' }} />
+                        <DeleteOutlineIcon sx={{ fontSize: '1rem', color: '#7a8a50' }} />
                       </IconButton>
                     </Stack>
                   </Stack>
@@ -204,10 +208,10 @@ const Cart = ({ open, onClose }) => {
 
         {/* Footer */}
         {cart.length > 0 && (
-          <Box sx={{ px: 3, py: 3, borderTop: '1px solid #FBEAEA' }}>
+          <Box sx={{ px: 3, py: 3, borderTop: '1px solid #f3f8ed' }}>
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2, height: '2rem' }}>
-              <Typography sx={{ fontWeight: 600, color: '#6B3A3A', fontSize: '1rem', lineHeight: '2rem', verticalAlign: 'middle' }}>Total</Typography>
-              <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700, fontSize: '1.3rem', color: '#A20E0E', lineHeight: '2rem', verticalAlign: 'middle' }}>
+              <Typography sx={{ fontWeight: 600, color: '#3a4a1a', fontSize: '1rem', lineHeight: '2rem', verticalAlign: 'middle' }}>Total</Typography>
+              <Typography sx={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700, fontSize: '1.3rem', color: '#c13c2c', lineHeight: '2rem', verticalAlign: 'middle' }}>
                 {formatPrice(totalPrice)}
               </Typography>
             </Box>
@@ -231,7 +235,7 @@ const Cart = ({ open, onClose }) => {
               variant="text"
               size="small"
               onClick={clearCart}
-              sx={{ mt: 1, color: '#B07070', fontSize: '0.78rem' }}
+              sx={{ mt: 1, color: '#7a8a50', fontSize: '0.78rem' }}
             >
               Vaciar carrito
             </Button>

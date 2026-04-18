@@ -64,11 +64,11 @@ const Contact = () => {
       variant="outlined"
       sx={{
         '& .MuiOutlinedInput-root': {
-          '& fieldset': { borderColor: '#E8C5C5' },
-          '&:hover fieldset': { borderColor: '#A20E0E' },
-          '&.Mui-focused fieldset': { borderColor: '#A20E0E' },
+          '& fieldset': { borderColor: '#c8dba0' },
+          '&:hover fieldset': { borderColor: '#5c7523' },
+          '&.Mui-focused fieldset': { borderColor: '#5c7523' },
         },
-        '& .MuiInputLabel-root.Mui-focused': { color: '#A20E0E' },
+        '& .MuiInputLabel-root.Mui-focused': { color: '#c13c2c' },
       }}
     />
   );
@@ -76,20 +76,20 @@ const Contact = () => {
   return (
     <Box
       id="contacto-form"
-      sx={{ py: { xs: 8, md: 12 }, bgcolor: '#FDF6F6' }}
+      sx={{ py: { xs: 8, md: 12 }, bgcolor: '#edf6e5' }}
     >
       <Container maxWidth="sm">
         <Box sx={{ textAlign: 'center', mb: 6 }}>
           <Chip
             label="Escríbenos"
-            sx={{ bgcolor: '#FBEAEA', color: '#A20E0E', fontWeight: 600, mb: 2, fontSize: '0.82rem' }}
+            sx={{ bgcolor: '#f3f8ed', color: '#c13c2c', fontWeight: 600, mb: 2, fontSize: '0.82rem' }}
           />
           <Typography
             variant="h2"
             sx={{
               fontFamily: "'Cormorant Garamond', serif",
               fontWeight: 700,
-              color: '#A20E0E',
+              color: '#c13c2c',
               fontSize: { xs: '2.2rem', md: '3rem' },
               lineHeight: 1.1,
             }}
@@ -100,14 +100,14 @@ const Contact = () => {
             sx={{
               fontFamily: "'Great Vibes', cursive",
               fontSize: { xs: '1.6rem', md: '2.2rem' },
-              color: '#FF751F',
+              color: '#de6b02',
               mt: 0.5,
               mb: 2,
             }}
           >
             Estamos para servirte
           </Typography>
-          <Typography sx={{ color: '#6B3A3A', lineHeight: 1.8, fontSize: '0.97rem' }}>
+          <Typography sx={{ color: '#3a4a1a', lineHeight: 1.8, fontSize: '0.97rem' }}>
             ¿Tienes preguntas, pedidos especiales o quieres ser distribuidor?
             Cuéntanos, te respondemos a la brevedad.
           </Typography>
@@ -117,21 +117,21 @@ const Contact = () => {
         <Box
           sx={{
             bgcolor: 'white',
-            border: '1px solid #FBEAEA',
+            border: '1px solid #f3f8ed',
             borderRadius: 4,
             p: { xs: 3, md: 4 },
             mb: 4,
-            boxShadow: '0 4px 24px rgba(162,14,14,0.06)',
+            boxShadow: '0 4px 24px rgba(92,117,35,0.06)',
           }}
         >
           <Stack direction="row" spacing={1.5} alignItems="center" sx={{ mb: 2.5 }}>
-            <AccessTimeIcon sx={{ color: '#A20E0E', fontSize: '1.4rem' }} />
+            <AccessTimeIcon sx={{ color: '#c13c2c', fontSize: '1.4rem' }} />
             <Typography
               sx={{
                 fontFamily: "'Cormorant Garamond', serif",
                 fontWeight: 700,
                 fontSize: '1.3rem',
-                color: '#A20E0E',
+                color: '#c13c2c',
                 lineHeight: 1,
               }}
             >
@@ -153,24 +153,24 @@ const Contact = () => {
                   px: 2,
                   py: 1,
                   borderRadius: 2,
-                  bgcolor: activo ? '#FDF6F6' : 'transparent',
+                  bgcolor: activo ? '#edf6e5' : 'transparent',
                 }}
               >
-                <Typography sx={{ fontSize: '0.92rem', fontWeight: 600, color: '#3D1A1A', whiteSpace: 'nowrap' }}>
+                <Typography sx={{ fontSize: '0.92rem', fontWeight: 600, color: '#2a3a10', whiteSpace: 'nowrap' }}>
                   {dia}
                 </Typography>
                 <Box
                   sx={{
                     flex: 1,
                     mx: 2,
-                    borderBottom: '2px dotted #E8C5C5',
+                    borderBottom: '2px dotted #c8dba0',
                   }}
                 />
                 <Typography
                   sx={{
                     fontSize: '0.9rem',
                     fontWeight: 700,
-                    color: activo ? '#A20E0E' : '#B07070',
+                    color: activo ? '#5c7523' : '#7a8a50',
                     fontStyle: activo ? 'normal' : 'italic',
                     whiteSpace: 'nowrap',
                   }}
@@ -190,8 +190,8 @@ const Contact = () => {
             bgcolor: 'white',
             borderRadius: 4,
             p: { xs: 3, md: 5 },
-            boxShadow: '0 4px 24px rgba(162,14,14,0.08)',
-            border: '1px solid #FBEAEA',
+            boxShadow: '0 4px 24px rgba(92,117,35,0.08)',
+            border: '1px solid #f3f8ed',
           }}
         >
           <Stack spacing={0.5}>
@@ -212,11 +212,11 @@ const Contact = () => {
             endIcon={<SendIcon />}
             sx={{
               mt: 1,
-              bgcolor: '#A20E0E',
+              bgcolor: '#5c7523',
               fontSize: '1rem',
               py: 1.5,
               borderRadius: 2,
-              '&:hover': { bgcolor: '#7A0A0A' },
+              '&:hover': { bgcolor: '#3e5018' },
             }}
           >
             Enviar mensaje
@@ -233,7 +233,7 @@ const Contact = () => {
         <Alert
           severity="success"
           onClose={() => setSnackbar(false)}
-          sx={{ bgcolor: '#A20E0E', color: 'white', '& .MuiAlert-icon': { color: 'white' } }}
+          sx={{ bgcolor: '#5c7523', color: 'white', '& .MuiAlert-icon': { color: 'white' } }}
         >
           ¡Mensaje preparado! Revisa tu cliente de correo para enviarlo.
         </Alert>

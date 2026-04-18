@@ -16,7 +16,7 @@ const Hero = () => {
       id="inicio"
       sx={{
         minHeight: '100vh',
-        background: 'linear-gradient(135deg, #FBEAEA 0%, #f5d5d5 40%, #FBEAEA 100%)',
+        background: 'linear-gradient(135deg, #f3f8ed 0%, #d8ecc0 40%, #f3f8ed 100%)',
         display: 'flex',
         alignItems: 'center',
         pt: 8,
@@ -33,7 +33,7 @@ const Hero = () => {
           width: 380,
           height: 380,
           borderRadius: '50%',
-          bgcolor: '#A20E0E',
+          bgcolor: '#5c7523',
           opacity: 0.07,
         }}
       />
@@ -45,7 +45,7 @@ const Hero = () => {
           width: 280,
           height: 280,
           borderRadius: '50%',
-          bgcolor: '#FF751F',
+          bgcolor: '#de6b02',
           opacity: 0.08,
         }}
       />
@@ -57,7 +57,7 @@ const Hero = () => {
           width: 120,
           height: 120,
           borderRadius: '50%',
-          bgcolor: '#A20E0E',
+          bgcolor: '#5c7523',
           opacity: 0.05,
         }}
       />
@@ -78,7 +78,7 @@ const Hero = () => {
               icon={<AutoAwesomeIcon sx={{ fontSize: '0.9rem !important' }} />}
               label="100% Artesanal · Natural · Colombiano"
               sx={{
-                bgcolor: '#FF751F',
+                bgcolor: '#de6b02',
                 color: 'white',
                 fontWeight: 600,
                 fontSize: '0.78rem',
@@ -95,7 +95,7 @@ const Hero = () => {
               variant="h5"
               sx={{
                 fontFamily: "'Great Vibes', cursive",
-                color: '#A20E0E',
+                color: '#c13c2c',
                 fontSize: { xs: '1.6rem', md: '2rem' },
                 my: 2,
               }}
@@ -106,7 +106,7 @@ const Hero = () => {
             <Typography
               variant="body1"
               sx={{
-                color: '#6B3A3A',
+                color: '#3a4a1a',
                 fontSize: '1.05rem',
                 lineHeight: 1.8,
                 mb: 4,
@@ -131,12 +131,12 @@ const Hero = () => {
                 startIcon={<ShoppingBagOutlinedIcon />}
                 onClick={() => scrollTo('#productos')}
                 sx={{
-                  bgcolor: '#A20E0E',
+                  bgcolor: '#5c7523',
                   fontSize: '1rem',
                   py: 1.5,
                   px: 4,
                   width: { xs: '100%', sm: 'auto' },
-                  '&:hover': { bgcolor: '#7A0A0A' },
+                  '&:hover': { bgcolor: '#3e5018' },
                 }}
               >
                 Ver productos
@@ -146,15 +146,15 @@ const Hero = () => {
                 size="large"
                 onClick={() => scrollTo('#nosotros')}
                 sx={{
-                  borderColor: '#A20E0E',
-                  color: '#A20E0E',
+                  borderColor: '#5c7523',
+                  color: '#c13c2c',
                   fontSize: '1rem',
                   py: 1.5,
                   px: 4,
                   width: { xs: '100%', sm: 'auto' },
                   '&:hover': {
-                    bgcolor: '#A20E0E10',
-                    borderColor: '#A20E0E',
+                    bgcolor: '#5c752310',
+                    borderColor: '#5c7523',
                   },
                 }}
               >
@@ -177,7 +177,7 @@ const Hero = () => {
                   <Typography
                     variant="h4"
                     sx={{
-                      color: '#A20E0E',
+                      color: '#c13c2c',
                       fontFamily: "'Cormorant Garamond', serif",
                       fontWeight: 700,
                       lineHeight: 1,
@@ -185,7 +185,7 @@ const Hero = () => {
                   >
                     {stat.value}
                   </Typography>
-                  <Typography variant="caption" sx={{ color: '#6B3A3A', fontWeight: 500 }}>
+                  <Typography variant="caption" sx={{ color: '#3a4a1a', fontWeight: 500 }}>
                     {stat.label}
                   </Typography>
                 </Box>
@@ -205,7 +205,7 @@ const Hero = () => {
           >
             <Box
               sx={{
-                bgcolor: '#A20E0E10',
+                bgcolor: '#5c752310',
                 borderRadius: '50%',
                 width: { xs: 280, md: 360 },
                 height: { xs: 280, md: 360 },
@@ -218,7 +218,7 @@ const Hero = () => {
                   position: 'absolute',
                   inset: -12,
                   borderRadius: '50%',
-                  border: '2px dashed #A20E0E40',
+                  border: '2px dashed #5c752340',
                 },
               }}
             >
@@ -228,7 +228,7 @@ const Hero = () => {
               variant="caption"
               sx={{
                 mt: 1.5,
-                color: '#A20E0E',
+                color: '#c13c2c',
                 fontWeight: 600,
                 fontSize: '0.85rem',
                 textAlign: 'center',

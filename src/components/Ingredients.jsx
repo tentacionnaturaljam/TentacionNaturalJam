@@ -54,7 +54,7 @@ const ingredients = [
     name: 'Maracuyá',
     img: maracuya,
     desc: 'Fruta tropical de intensa acidez y aroma único. Se fusiona con el borojó para crear una de nuestras combinaciones más vibrantes.',
-    color: '#FF751F',
+    color: '#de6b02',
   },
   {
     name: 'Piña',
@@ -75,7 +75,7 @@ const Ingredients = () => (
     id="ingredientes"
     sx={{
       py: { xs: 8, md: 12 },
-      background: 'linear-gradient(180deg, #FFF9F0 0%, #FDF6F6 100%)',
+      background: 'linear-gradient(180deg, #f6fbf0 0%, #edf6e5 100%)',
     }}
   >
     <Container maxWidth="lg">
@@ -83,14 +83,14 @@ const Ingredients = () => (
       <Box sx={{ textAlign: 'center', mb: 8 }}>
         <Chip
           label="Lo que usamos"
-          sx={{ bgcolor: '#FBEAEA', color: '#A20E0E', fontWeight: 600, mb: 2, fontSize: '0.82rem' }}
+          sx={{ bgcolor: '#f3f8ed', color: '#c13c2c', fontWeight: 600, mb: 2, fontSize: '0.82rem' }}
         />
         <Typography
           variant="h2"
           sx={{
             fontFamily: "'Cormorant Garamond', serif",
             fontWeight: 700,
-            color: '#A20E0E',
+            color: '#c13c2c',
             fontSize: { xs: '2.4rem', md: '3.2rem' },
             lineHeight: 1.1,
           }}
@@ -101,7 +101,7 @@ const Ingredients = () => (
           sx={{
             fontFamily: "'Great Vibes', cursive",
             fontSize: { xs: '1.8rem', md: '2.4rem' },
-            color: '#FF751F',
+            color: '#de6b02',
             mt: 0.5,
             mb: 2,
           }}
@@ -110,7 +110,7 @@ const Ingredients = () => (
         </Typography>
         <Typography
           variant="body1"
-          sx={{ color: '#6B3A3A', maxWidth: 540, mx: 'auto', lineHeight: 1.8, fontSize: '1rem' }}
+          sx={{ color: '#3a4a1a', maxWidth: 540, mx: 'auto', lineHeight: 1.8, fontSize: '1rem' }}
         >
           Seleccionamos cada ingrediente por su calidad, origen colombiano y aporte sensorial.
           Sin artificiales, sin rellenos — solo lo mejor de la naturaleza.
@@ -134,13 +134,13 @@ const Ingredients = () => (
             key={ing.name}
             sx={{
               borderRadius: 4,
-              boxShadow: '0 4px 20px rgba(162,14,14,0.07)',
+              boxShadow: '0 4px 20px rgba(92,117,35,0.07)',
               border: '1px solid #F5E0E0',
               overflow: 'hidden',
               transition: 'transform 0.25s ease, box-shadow 0.25s ease',
               '&:hover': {
                 transform: 'translateY(-6px)',
-                boxShadow: '0 16px 40px rgba(162,14,14,0.13)',
+                boxShadow: '0 16px 40px rgba(92,117,35,0.13)',
               },
               bgcolor: 'white',
             }}
@@ -193,7 +193,7 @@ const Ingredients = () => (
               <Typography
                 variant="body2"
                 sx={{
-                  color: '#6B3A3A',
+                  color: '#3a4a1a',
                   lineHeight: 1.7,
                   fontSize: '0.85rem',
                 }}

@@ -1,4 +1,4 @@
-import mascotaImg from '../assets/mascota.jpg';
+import mascotaImg from '../assets/mascota.jpeg';
 
 const Mascot = ({ size = 180 }) => (
   <img

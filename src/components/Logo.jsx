@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 
 const Logo = ({ size = 'medium', light = false }) => {
-  const color = light ? '#FBEAEA' : '#A20E0E';
+  const color = light ? '#f3f8ed' : '#5c7523';
   const scales = {
     small: { tentacion: '1.4rem', natural: '1.2rem', year: '0.55rem' },
     medium: { tentacion: '2.2rem', natural: '1.9rem', year: '0.75rem' },
