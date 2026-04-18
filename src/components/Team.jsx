@@ -33,7 +33,7 @@ const teamMembers = [
   {
     name: 'Paula Andrea Soriano Fernández',
     role: 'Artesana & Control de Calidad',
-    bio: 'Mentee Creativa y Chief Taster. El alma alegre del equipo, transforma ideas en magia y cuida cada detalle hasta alcanzar la perfección en cada sabor.',
+    bio: 'El alma alegre del equipo, transforma ideas en magia y cuida cada detalle hasta alcanzar la perfección en cada sabor.',
     img: paula,
     color: '#c13c2c',
     badge: 'Artesana',
@@ -42,7 +42,7 @@ const teamMembers = [
   {
     name: 'Maria Fernanda Mendoza Guzmán',
     role: 'Diseño & Marketing Digital',
-    bio: 'Mente creativa de Tentación Natural. Convierte frutas exóticas en experiencias inolvidables y logra que cada sabor cuente una historia que conecta y enamora.',
+    bio: 'Convierte frutas exóticas en experiencias inolvidables y logra que cada sabor cuente una historia que conecta y enamora.',
     img: fernanda,
     color: '#de6b02',
     badge: 'Marketing',

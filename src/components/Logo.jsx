@@ -1,62 +1,36 @@
-import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
+import logoImg from '../assets/Logo.png';
 
-const Logo = ({ size = 'medium', light = false }) => {
-  const color = light ? '#f3f8ed' : '#5c7523';
-  const scales = {
-    small: { tentacion: '1.4rem', natural: '1.2rem', year: '0.55rem' },
-    medium: { tentacion: '2.2rem', natural: '1.9rem', year: '0.75rem' },
-    large: {
-      tentacion: { xs: '2.6rem', sm: '3.2rem', md: '3.8rem' },
-      natural:   { xs: '2.2rem', sm: '2.7rem', md: '3.2rem' },
-      year:      { xs: '0.75rem', md: '1rem' },
-    },
-  };
-  const s = scales[size] || scales.medium;
-
-  return (
-    <Box sx={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'center', lineHeight: 1 }}>
-      <Typography
-        component="span"
-        sx={{
-          fontFamily: "'Nunito', sans-serif",
-          fontSize: s.year,
-          fontWeight: 700,
-          color,
-          letterSpacing: '0.2em',
-          mb: '-2px',
-        }}
-      >
-        2026
-      </Typography>
-      <Typography
-        component="span"
-        sx={{
-          fontFamily: "'Cormorant Garamond', serif",
-          fontSize: s.tentacion,
-          fontWeight: 700,
-          color,
-          letterSpacing: '0.06em',
-          lineHeight: 1,
-          textTransform: 'uppercase',
-        }}
-      >
-        Tentación
-      </Typography>
-      <Typography
-        component="span"
-        sx={{
-          fontFamily: "'Great Vibes', cursive",
-          fontSize: s.natural,
-          color,
-          lineHeight: 1.1,
-          mt: '-4px',
-        }}
-      >
-        Natural
-      </Typography>
-    </Box>
-  );
+const sizes = {
+  small:  { xs: 113, md: 81 },
+  medium: { xs: 144, md: 162 },
+  large:  { xs: 234, sm: 288, md: 342 },
 };
+
+const Logo = ({ size = 'medium' }) => (
+  <Box
+    sx={{
+      width: sizes[size] || sizes.medium,
+      height: sizes[size] || sizes.medium,
+      borderRadius: '100%',
+      overflow: 'hidden',
+      flexShrink: 0,
+      mx: { xs: 'auto', md: 0 },
+    }}
+  >
+    <Box
+      component="img"
+      src={logoImg}
+      alt="Tentación Natural"
+      sx={{
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        display: 'block',
+      }}
+    />
+  </Box>
+);
+
 
 export default Logo;
